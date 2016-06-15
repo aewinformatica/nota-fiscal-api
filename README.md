@@ -1,2 +1,2 @@
 # nota-fiscal-api
-Example project using spring-boot with JPA and JMS support.
+Example project is using spring-boot with JPA and JMS support.
