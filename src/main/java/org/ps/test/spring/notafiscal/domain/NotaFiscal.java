@@ -6,6 +6,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -68,10 +69,10 @@ public class NotaFiscal implements Serializable {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (! this.getClass().isInstance(obj)) return false;
-        final NotaFiscal other = (NotaFiscal) obj;
-        return this.getId().equals(other.getId());
+        return Optional.ofNullable(obj).map(o -> {
+            if (! this.getClass().isInstance(obj)) return false;
+            return this.getId().equals(((Mercadoria)obj).getId());
+        }).orElse(false);
     }
 
     @Override

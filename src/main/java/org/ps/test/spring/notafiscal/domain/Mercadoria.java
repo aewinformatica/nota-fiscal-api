@@ -7,6 +7,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -74,15 +75,15 @@ public class Mercadoria implements Serializable {
 
     @Override
     public int hashCode() {
-        return HashCodeBuilder.reflectionHashCode(this);
+        return new HashCodeBuilder().append(getId()).append(getCodigo()).append(getDescricao()).toHashCode();
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (! this.getClass().isInstance(obj)) return false;
-        final Mercadoria other = (Mercadoria) obj;
-        return this.getId().equals(other.getId());
+        return Optional.ofNullable(obj).map(o -> {
+            if (! this.getClass().isInstance(obj)) return false;
+            return this.getId().equals(((Mercadoria)obj).getId());
+        }).orElse(false);
     }
 
     @Override
