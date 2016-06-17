@@ -13,6 +13,10 @@ Ferramentas utilizadas no sistema:
  * [Angular Route v1.5.6](https://github.com/angular/bower-angular-route)
  * [Bootstrap v3.3.6](https://github.com/twbs/bootstrap)
  
+## Ferramentas de Teste
+Ferramentas utilizadas para os testes:
+ * [Spring Boot Starter Test](http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html)
+ 
 ## Rodar
 ```
 $> mvn spring-boot:run
