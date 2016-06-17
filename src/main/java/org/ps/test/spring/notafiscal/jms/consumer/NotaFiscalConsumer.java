@@ -12,8 +12,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class NotaFiscalConsumer {
 
-    @Autowired
     private NotaFiscalRepository repository;
+
+    /**
+     * Contrutor que recebe a instância do repositório que é a classe necessária.
+     * @param repository {@link NotaFiscalRepository} instância do repositório.
+     */
+    @Autowired
+    public NotaFiscalConsumer(NotaFiscalRepository repository) {
+        this.repository = repository;
+    }
 
     /**
      * Método que consome uma nota fiscal e salva no banco de dados.

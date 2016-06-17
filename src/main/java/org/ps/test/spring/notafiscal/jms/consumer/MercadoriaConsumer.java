@@ -12,8 +12,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class MercadoriaConsumer {
 
-    @Autowired
     private MercadoriaRepository repository;
+
+    /**
+     * Contrutor que recebe a instância do repositório que é a classe necessária.
+     * @param repository {@link MercadoriaRepository} instância do repositório.
+     */
+    @Autowired
+    public MercadoriaConsumer(MercadoriaRepository repository) {
+        this.repository = repository;
+    }
 
     /**
      * Método que consome uma mercadoria e salva no banco de dados.
