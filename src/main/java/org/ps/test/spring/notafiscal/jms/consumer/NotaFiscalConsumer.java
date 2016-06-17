@@ -21,6 +21,10 @@ public class NotaFiscalConsumer {
      */
     @JmsListener(destination = "notafiscal-mailbox")
     public void incluir(NotaFiscal notaFiscal) {
-        repository.saveAndFlush(notaFiscal);
+        try {
+            repository.saveAndFlush(notaFiscal);
+        } catch (Exception e) {
+            throw new ConsumerException("Erro ao incluir notaFiscal=" + notaFiscal, e);
+        }
     }
 }

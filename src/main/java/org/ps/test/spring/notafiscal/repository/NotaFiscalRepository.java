@@ -10,7 +10,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  * endpoints RESTFull HATEOAS para manipular o recurso NotaFiscal.
  * @see NotaFiscal
  */
-@RepositoryRestResource(path = "notafiscal", collectionResourceRel = "notafiscal")
+@RepositoryRestResource(path = "notasfiscais", collectionResourceRel = "notasfiscais")
 public interface NotaFiscalRepository extends JpaRepository<NotaFiscal, Long> {
 
 }

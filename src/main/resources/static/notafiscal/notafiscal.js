@@ -24,7 +24,7 @@ angular.module('app.notafiscal', ['ngRoute'])
   };
 
   self.init = function() {
-    $http.get('/api/notafiscal').success(function(response) {
+    $http.get('/api/notasfiscais').success(function(response) {
       self.notasfiscais = response._embedded.notafiscal;
     }).error(function(error) {
       console.log('error: ' + error);

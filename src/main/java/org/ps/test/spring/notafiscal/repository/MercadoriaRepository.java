@@ -2,7 +2,6 @@ package org.ps.test.spring.notafiscal.repository;
 
 import org.ps.test.spring.notafiscal.domain.Mercadoria;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 /**
@@ -11,7 +10,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  * endpoints RESTFull HATEOAS para manipular o recurso Mercadoria.
  * @see Mercadoria
  */
-@RepositoryRestResource(path = "mercadoria", collectionResourceRel = "mercadoria")
+@RepositoryRestResource(path = "mercadorias", collectionResourceRel = "mercadorias")
 public interface MercadoriaRepository extends JpaRepository<Mercadoria, Long> {
 
 }

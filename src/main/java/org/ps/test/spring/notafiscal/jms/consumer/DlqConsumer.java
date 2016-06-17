@@ -23,7 +23,7 @@ public class DlqConsumer {
 
     @JmsListener(destination = "ActiveMQ.DLQ")
     public void dlq(GenericMessage<?> msg) {
-        logger.error("code='ERRO' message='Erro ao incluir {}' nested={}", msg.getPayload().getClass().getSimpleName(), msg);
+        logger.error("code=ERRO message=Erro ao incluir {} nested={}", msg.getPayload().getClass().getSimpleName(), msg);
     }
 
 }

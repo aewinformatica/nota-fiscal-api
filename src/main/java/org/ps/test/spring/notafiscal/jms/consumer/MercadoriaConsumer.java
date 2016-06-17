@@ -21,6 +21,10 @@ public class MercadoriaConsumer {
      */
     @JmsListener(destination = "mercadoria-mailbox")
     public void incluir(Mercadoria mercadoria) {
-        repository.saveAndFlush(mercadoria);
+        try {
+            repository.saveAndFlush(mercadoria);
+        } catch (Exception e) {
+            throw new ConsumerException("Erro ao incluir mercadoria=" + mercadoria, e);
+        }
     }
 }
