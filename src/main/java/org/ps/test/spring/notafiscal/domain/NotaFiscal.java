@@ -6,21 +6,24 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Optional;
 import java.util.Set;
 
 /**
- * Created by salespaulo on 6/14/16.
+ * Entidade que representa uma Nota Fiscal no sistema. Ela possui propriedades e uma lista de itens que são instâncias
+ * mercadorias.
+ * @see Mercadoria
  */
 @Entity
 public class NotaFiscal implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -8014090543203035390L;
 
     @Id
     @GeneratedValue (strategy= GenerationType.AUTO)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String codigo;
 
     @Column(nullable = false)
@@ -68,10 +71,7 @@ public class NotaFiscal implements Serializable {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (! this.getClass().isInstance(obj)) return false;
-        final NotaFiscal other = (NotaFiscal) obj;
-        return this.getId().equals(other.getId());
+        return Optional.ofNullable(obj).map(this::toEquals).orElse(false);
     }
 
     @Override
@@ -79,4 +79,8 @@ public class NotaFiscal implements Serializable {
         return ToStringBuilder.reflectionToString(this);
     }
 
+    private boolean toEquals(Object obj) {
+        if (! this.getClass().isInstance(obj)) return false;
+        return this.getId() != null && this.getId().equals(((Mercadoria)obj).getId());
+    }
 }

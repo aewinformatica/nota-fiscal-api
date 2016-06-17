@@ -1,0 +1,23 @@
+<div ng-controller="MercadoriaCtrl as c">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <strong>Mercadorias - Listagem</strong>
+        </div>
+        <table class="table table-bordered table-condensed table-hover ">
+            <thead>
+            <tr>
+                <th class="col-sm-1">Código</th>
+                <th class="col-sm-2">Descrição</th>
+                <th class="col-sm-2">Valor</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="m in c.mercadorias">
+                <td>{{ m.codigo }}</td>
+                <td>{{ m.descricao }}</td>
+                <td>{{ m.valor }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

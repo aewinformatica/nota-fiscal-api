@@ -5,9 +5,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 /**
- * Created by salespaulo on 6/14/16.
+ * Interface que representa o contrato de um repositório de {@link NotaFiscal}.
+ * Está utilizando o <b>spring-data-rest</b> para realizar as consultas à base de dados e disponibilizar
+ * endpoints RESTFull HATEOAS para manipular o recurso NotaFiscal.
+ * @see NotaFiscal
  */
-@RepositoryRestResource(path = "notafiscal", collectionResourceRel = "notafiscal")
+@RepositoryRestResource(path = "notasfiscais", collectionResourceRel = "notasfiscais")
 public interface NotaFiscalRepository extends JpaRepository<NotaFiscal, Long> {
 
 }
