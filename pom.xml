@@ -66,6 +66,13 @@
 
         <dependency>
             <groupId>org.webjars.bower</groupId>
+            <artifactId>angular-resource</artifactId>
+            <version>1.5.6</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars.bower</groupId>
             <artifactId>angular-route</artifactId>
             <version>1.5.6</version>
             <scope>runtime</scope>
