@@ -66,13 +66,6 @@
 
         <dependency>
             <groupId>org.webjars.bower</groupId>
-            <artifactId>angular-resource</artifactId>
-            <version>1.5.6</version>
-            <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.webjars.bower</groupId>
             <artifactId>angular-route</artifactId>
             <version>1.5.6</version>
             <scope>runtime</scope>
@@ -83,13 +76,6 @@
             <artifactId>bootstrap</artifactId>
             <version>3.3.6</version>
             <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.webjars.bower</groupId>
-            <artifactId>jasmine-core</artifactId>
-            <version>2.4.1</version>
-            <scope>test</scope>
         </dependency>
 
 		<dependency>
