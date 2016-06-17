@@ -6,7 +6,10 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 /**
- * Created by salespaulo on 6/14/16.
+ * Interface que representa o contrato de um repositório de {@link Mercadoria}s.
+ * Está utilizando o <b>spring-data-rest</b> para realizar as consultas à base de dados e disponibilizar
+ * endpoints RESTFull HATEOAS para manipular o recurso Mercadoria.
+ * @see Mercadoria
  */
 @RepositoryRestResource(path = "mercadoria", collectionResourceRel = "mercadoria")
 public interface MercadoriaRepository extends JpaRepository<Mercadoria, Long> {

@@ -31,16 +31,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
-		
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>	
+
 		<dependency>
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-broker</artifactId>
-			<version>5.13.3</version>
+            <version>5.13.3</version>
 		</dependency>
 
 		<dependency>
@@ -49,28 +44,39 @@
 			<version>3.4</version>
 		</dependency>
 
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.192</version>
+            <scope>runtime</scope>
+        </dependency>
+
 		<dependency>
 			<groupId>org.webjars.bower</groupId>
 			<artifactId>angular</artifactId>
 			<version>1.5.6</version>
+            <scope>runtime</scope>
 		</dependency>
-
-        <dependency>
-            <groupId>org.webjars.bower</groupId>
-            <artifactId>angular-resource</artifactId>
-            <version>1.5.6</version>
-        </dependency>
 
         <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>angular-route</artifactId>
             <version>1.5.6</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>bootstrap</artifactId>
             <version>3.3.6</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars.bower</groupId>
+            <artifactId>jasmine-core</artifactId>
+            <version>2.4.1</version>
+            <scope>test</scope>
         </dependency>
 
 		<dependency>
